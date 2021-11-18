@@ -1,0 +1,127 @@
+.box{
+    border-radius: 6px;
+    height: 40px;
+    width: 80px;
+    margin: 60px auto;
+}
+
+.box1{
+    background-color: aquamarine;
+}
+
+.box2{
+    background-color: purple;
+}
+
+/*para agregar tranformacion*/
+
+.box:hover{
+    transform: scale(4);
+}
+
+.box2{
+    /* transition:all 2s; puedo ponerlo asi tmb abreviado */
+    transition: all;
+    transition-duration: 2s;
+}
+
+.circle1,.circle2,.circle3,.circle4,.circle5{
+border-radius: 50%;
+height: 30px;
+width: 30px;
+margin: 10px;
+
+}
+.circle1{
+    background-color: mediumpurple;
+    transition: all 1.5s ease;
+}
+.circle2{
+    background-color: aquamarine;
+    transition: all 1.5s ease-in;
+}
+.circle3{
+    background-color:blanchedalmond;
+    transition: all 1.5s ease-in-out;
+}
+.circle4{
+    background-color: red;
+    transition: all 1.5s ease-out;
+}
+.circle5{
+    background-color: olive;
+    transition: all 1.5s step-end;
+}
+
+.container-circle:hover .circle1,
+.container-circle:hover .circle2,
+.container-circle:hover .circle3,
+.container-circle:hover .circle4,
+.container-circle:hover .circle5{
+transform: translateX(200px);
+}
+
+.square1, .square2{
+    border-radius: 4px;
+    height: 150px;
+    width: 150px;
+    margin: 100px;
+    position: absolute;
+
+}
+.square1{
+background-color: teal;
+}
+.square2{
+background-color: steelblue;
+transition: all 0.8s;
+}
+.square2:hover{
+    transform: translate(20px, 20px);
+}
+
+.combinado{
+    background-color: violet;
+    height: 75px;
+    width: 75px;
+    margin: 50px auto;
+    transition: all 2s;
+}
+.combinado:hover{
+    transform: rotate(90deg) scale(2) translateX(80px); /*se puede poner los grades deg en negativo tmb -90deg*/
+    /*Prefijos asegura que la transormacion se haga en todos los navegadores*/
+    -webkit-transform:rotate(90deg) scale(2) translateX(80px) ;
+    -o-transform: rotate(90deg) scale(2) translateX(80px);
+    -moz-transform: rotate(90deg) scale(2) translateX(80px);
+}
+.animaciones{
+    width: 100px;
+    height: 100px;
+    margin: 50px auto;
+    background-color: yellow;
+}
+
+.animaciones:hover{
+    /*nombre-duración*/
+    /* animation-name: ;
+    animation-duration: ; */
+    animation: changeColor 4s;
+}
+/*fotogramas de la animacion-regla*/
+@keyframes changeColor{
+    0%{
+        background-color: violet;
+    }
+    15%{
+        border-radius: 50%;
+    }
+    25%{
+        width: 600px;
+    }
+    50%{
+        background-color: turquoise;
+    }
+    100%{
+        background-color: teal;
+    }
+}
